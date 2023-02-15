@@ -1,52 +1,61 @@
+
+ 
 <html>
-<head>
-  <titledent>Mask Identification</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
-  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
-
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body> 
-  <body background="background.jpg">
-<center>
-  <h3 class="btn btn-primary heading">Mask Identification
-    <hr>
-    <center>
-      <div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 heading_div'>
-        Model is trained on Mask Identification  
+    <head>
+      <title>Wear Masks, Stay safe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+  
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+  
+    <body>
+    <div class="container">
+    
+      <center>
+        <h3 class="btn btn-info heading">
+         Wear Masks, Stay Safe!
         <br>
-          <div class="btn btn-warning heading_div2">
-            Proper Mask|Improper Mask|No Mask 
-          </div>
+        <span>&#x1F637;</span>  <!-- masked emoji -->
+        <span>&#x26d4;</span>   <!-- entry denied emoji -->
+        </h3>
+  
+        <br><br>
+  
+        <p style="font-size: 22px;">Take your picture before you enter the office premises.</p>
+  
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Webcam View - </label>
+            <div id="camera"></div>
+            <br><br>
+            <button onclick="take_snapshot();" class="btn btn-warning">Capture Image</button>
         </div>
-    </center>
-    <br>
-  </h3>
-  <br><br>
   
-  <p class="btn btn-success result_para_tag">Object : 
-    <span id="result_object_name"></span> 
-  </p>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Prediction 1 - </label>
+            <p class="status_update" id="status"></p>
+            <p class="emoji" id="update_emoji"></p>
+          </div>
   
-  <br><br>
-  <p class="btn btn-success result_para_tag">Accuracy : 
-    <span id="result_object_accuracy"></span> 
-  </p>
-
-</center>
-
-<div class="copy_right_footer">
-Devloped by - Shreyansh
-</div>
-
-<script src="main.js"></script>
-</body>
-
-</html>
-
-
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Snapshot - </label>
+            <div id="result"></div>
+            <br><br>
+            <button onclick="check();" class="btn btn-success">Predict Emotion</button>
+           </div>
+  
+      </center>
+  
+    </div>
+  
+  <script src="main.js"></script>
+  
+    </body>
+  </html>
+  
+   

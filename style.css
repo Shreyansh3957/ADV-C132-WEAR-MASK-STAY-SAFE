@@ -1,50 +1,40 @@
-  .heading
-  {
-    font-size: 23px;
-    width: 100%;
-    margin: 0px;
-    box-shadow:5px 5px 5px grey;
-  }
-  .heading_div
-  {
-    float: none ;
-    background: white ; 
-    padding: 10px;
-    border-radius: 20px; 
-    color: black;
-    box-shadow:5px 5px 5px grey;
-  }
-  .heading_div2
-  {
-    font-size: 18px ;
-  }
-  .result_para_tag
-  {
-    box-shadow:5px 5px 5px grey;
-    font-size: 20px;
-  }
+body
+{
+  color: red;
+  background-color: skyblue
+}
+span
+{
+  font-size: 30px;
+}
+#camera , #result
+{
+  border: 2px dashed black;
+  width: 350px;
+  height: 300px; 
+  margin-top: 20px;
+}
+#status 
+{
+  color: black;
+  font-size: 40px;
+}
 
-  .result_para_tag span{
-    white-space: pre-line
-  }
-
-  .copy_right_footer {
-    position: fixed;
-    color: white;
-    bottom: 0;
-    width: 100%;
-    background-color:grey;
-    line-height: 3;
-    text-align: left;
-    font-size: 20px;
-  }
-
-  canvas{
-    border:5px solid white;
-    border-radius:20px;
-    box-shadow:5px 5px 5px grey;
-    margin-top:160px;
-  }
-
-  
- 
+.emoji
+{
+  font-size:48px;
+}
+.heading
+{
+  font-size: 18px;
+  border-radius: 10px;
+  letter-spacing: 10px;
+}
+label
+{
+    font-size: 14px;
+  color: #62b33a;
+  padding: 6px;
+  border-radius: 10px;
+  background-color: white;
+}
